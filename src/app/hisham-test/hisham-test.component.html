@@ -1,0 +1,15 @@
+<p appHighlight>hisham-test works!</p>
+
+<ul>
+  <li *ngFor="let car of hishamCars">
+    {{ car | uppercase | lowercase | titlecase }}
+  </li>
+</ul>
+
+<button (click)="updateTime()">Update time!</button>
+<br />
+{{ dateExample | date: "dd-MM-yyyy hh:mm:s" }}
+<br />
+{{ currencyExample | currency: "€" }}
+<br />
+<input type="text" [(ngModel)]="currencyExample" />

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from '../shared/models/movie';
+import { MovieService } from '../shared/services/movie.service';
 
 @Component({
   selector: 'app-hisham-test',
@@ -10,7 +12,11 @@ export class HishamTestComponent implements OnInit {
   public dateExample = new Date();
   public currencyExample = 35085.82;
 
-  constructor() {}
+  public movies: Movie[];
+
+  constructor(movieService: MovieService) {
+    this.movies = movieService.getMovies();
+  }
 
   ngOnInit(): void {}
 

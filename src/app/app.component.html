@@ -1,9 +1,9 @@
 <h1 appHighlight>HELLO HISHAM!</h1>
 
-<input type="text" [(ngModel)]="name" />
-<br />
-<input type="text" [(ngModel)]="name" />
-<br />
-{{ name }}
+<input type="text" [(ngModel)]="movieTitle" /><br />
+<input type="number" [(ngModel)]="movieYear" /><br />
+<input type="number" [(ngModel)]="rating" /><br />
+
+<button (click)="addMovie()">Add star wars movie!</button>
 
 <app-hisham-test></app-hisham-test>

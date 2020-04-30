@@ -13,3 +13,12 @@
 {{ currencyExample | currency: "€" }}
 <br />
 <input type="text" [(ngModel)]="currencyExample" />
+<br />
+<br />
+<h1>Movies:</h1>
+
+<ul>
+  <li *ngFor="let movie of movies">
+    {{ movie.title }} - {{ movie.year }} - {{ movie.rating }}
+  </li>
+</ul>
